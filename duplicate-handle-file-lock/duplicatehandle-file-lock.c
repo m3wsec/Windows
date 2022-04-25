@@ -25,6 +25,7 @@ DWORD GetProcessIdByName(LPCWSTR ProcessName) //LPCWSTR refer to const unicode s
 	return 0;
 }
 
+//for extra exploit
 BOOL FromDupHandleToAllAccess(DWORD processId,HANDLE* handle)
 {
 	HANDLE targetHandle = OpenProcess(PROCESS_DUP_HANDLE,FALSE,processId);
